@@ -1,19 +1,17 @@
-# Aviatrix ACE Cloud Operations Demo
+# Aviatrix Azure Transit Firenet Demo
 
-This repository provides a Terraform implementation that deploys a single region Aviatrix Multi-Cloud Networking Architecture using Aviatrix modules across AWS, Azure and GCP.
-Deploys an Amazon Linux test EC2 instance in AWS with SSM, allow inbound from RFC1918.
-Deploys a Windows test VM with Firewall disabled in Azure with Bastion, allow inbound from RFC1918.
-Take approx 18 mins to deploy by default with HA gateway disabled.
+This repository provides a Terraform implementation that deploys a single region Aviatrix Multi-Cloud Networking Architecture with FireNet using Aviatrix modules in Azure.
+Deploys Windows test VMs with Firewall disabled in Azure with Bastion, allow inbound from RFC1918.
 
 The code provided is for demo purposes only.
 
-![Aviatrix ACE Cloud Operations Demo Topology](images/avx-ace-cloudops-demo.png "Aviatrix ACE Cloud Operations Demo Topology")
+![Aviatrix Azure Transit Firenet Demo](images/avx-azure-firenet-demo.png "Aviatrix Aviatrix Azure Transit Firenet Demo")
 
 ## Prerequisites
 
 Please make sure you have:
 - Aviatrix Controller 6.6
-- AWS, Azure, and GCP access accounts are onboarded. 
+- Azure access accounts are onboarded. 
 
 ## Environment Variables
 
@@ -24,12 +22,7 @@ Variables | Description
 AVIATRIX_CONTROLLER_IP | Aviatrix Controller IP or FQDN 
 AVIATRIX_USERNAME | Aviatrix Controller Username
 AVIATRIX_PASSWORD | Aviatrix Controller Password
-TF_VAR_aws_account | AWS Aviatrix Account 
 TF_VAR_azure_account | Azure Aviatrix Account
-TF_VAR_gcp_account | GCP Aviatrix Account
-AWS_ACCESS_KEY_ID | AWS Access Key
-AWS_SECRET_ACCESS_KEY | AWS Secret Access Key
-AWS_DEFAULT_REGION | AWS Default Region
 ARM_SUBSCRIPTION_ID | Azure Subscription ID
 ARM_TENANT_ID | Azure Tenant ID
 ARM_CLIENT_ID | Azure Client ID
@@ -40,13 +33,13 @@ ARM_CLIENT_SECRET | Azure Client Secret
 Clone the project
 
 ```bash
-git clone https://github.com/bayupw/avx-ace-cloudops-demo.git
+git clone https://github.com/bayupw/avx-azure-firenet-demo.git
 ```
 
 Go to the project directory
 
 ```bash
-cd avx-ace-cloudops-demo
+cd avx-azure-firenet-demo
 ```
 
 Set environment variables
